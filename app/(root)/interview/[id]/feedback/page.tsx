@@ -10,12 +10,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { getCurrentUser } from "@/lib/actions/auth.action";
 
-const Page = async ({ params }: RouteParams) => {
+const Feedback = async ({ params }: RouteParams) => {
     const { id } = await params;
     const user = await getCurrentUser();
 
     const interview = await getInterviewById(id);
-    if(!interview) redirect('/')
+    if (!interview) redirect("/");
 
     const feedback = await getFeedbackByInterviewId({
         interviewId: id,
@@ -35,7 +35,7 @@ const Page = async ({ params }: RouteParams) => {
                 <div className="flex flex-row gap-5">
                     {/* Overall Impression */}
                     <div className="flex flex-row gap-2 items-center">
-                        <Image src="/star.svg" width={22} height={22} alt="star"/>
+                        <Image src="/star.svg" width={22} height={22} alt="star" />
                         <p>
                             Overall Impression:{" "}
                             <span className="text-primary-200 font-bold">
@@ -47,7 +47,7 @@ const Page = async ({ params }: RouteParams) => {
 
                     {/* Date */}
                     <div className="flex flex-row gap-2">
-                        <Image src="/calendar.svg" width={22} height={22} alt="calendar"/>
+                        <Image src="/calendar.svg" width={22} height={22} alt="calendar" />
                         <p>
                             {feedback?.createdAt
                                 ? dayjs(feedback.createdAt).format("MMM D, YYYY h:mm A")
@@ -57,7 +57,7 @@ const Page = async ({ params }: RouteParams) => {
                 </div>
             </div>
 
-            <hr/>
+            <hr />
 
             <p>{feedback?.finalAssessment}</p>
 
@@ -115,4 +115,5 @@ const Page = async ({ params }: RouteParams) => {
         </section>
     );
 };
-export default Page
+
+export default Feedback;
