@@ -14,12 +14,6 @@ PrepWise is a Next.js application designed to help users prepare for job intervi
     *   [Project Setup](#project-setup)
 6.  [Running the Application](#running-the-application)
 7.  [Environment Variables](#environment-variables)
-8.  [Core Functionality & Components](#core-functionality--components)
-9.  [API Routes (Route Handlers)](#api-routes-route-handlers)
-10. [Styling & UI](#styling--ui)
-11. [Key Libraries & Services](#key-libraries--services)
-12. [Deployment Notes](#deployment-notes)
-13. [Future Enhancements](#future-enhancements)
 
 ## 1. Features
 
